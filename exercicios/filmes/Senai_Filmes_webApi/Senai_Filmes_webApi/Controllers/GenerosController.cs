@@ -18,9 +18,9 @@ namespace Senai_Filmes_webApi.Controllers
     [ApiController]
     public class GenerosController : ControllerBase
     {/// <summary>
-    /// O objeto _GeneroRepository que irá receber todos os metodos definidos na interface IGeneroRepository
-    /// </summary>
-        private IGeneroRepository _generoRepository { get; set;}
+     /// O objeto _GeneroRepository que irá receber todos os metodos definidos na interface IGeneroRepository
+     /// </summary>
+        private IGeneroRepository _generoRepository { get; set; }
         /// <summary>
         /// Instancia o objeto _generoRepository para que haja a referencia aos metodos no repositorio
         /// </summary>
@@ -37,6 +37,57 @@ namespace Senai_Filmes_webApi.Controllers
         {
             List<GeneroDomain> ListaGeneros = _generoRepository.ListarTodos();
             return Ok(ListaGeneros);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            GeneroDomain GeneroBuscado = _generoRepository.BuscarPorId(id);
+            if (GeneroBuscado == null)
+            {
+                return NotFound("Nenhum genero encontrado amigo!");
+            }
+            return Ok(GeneroBuscado);
+        }
+
+        /// <summary>
+        /// Cadastrar um novo Genero
+        /// </summary>
+        /// <param name="novoGenero"></param>
+        /// <returns>status code 201-created</returns>
+        [HttpPost]
+        public IActionResult Post(GeneroDomain novoGenero)
+        {
+            _generoRepository.Cadastrar(novoGenero);
+            return StatusCode(201);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _generoRepository.Deletar(id);
+            return StatusCode(204);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateByUrl(int id, GeneroDomain generoAtualizado )
+        {
+            GeneroDomain generoBuscado  = _generoRepository.BuscarPorId(id);
+            if (generoBuscado == null)
+            {
+                return NotFound("Nenhum genero encontrado amigo!");
+            }
+            try
+            {
+                 _generoRepository.AtualizaIdUrl(id,generoAtualizado);
+                return NoContent();
+            }
+            catch (Exception codErro)
+            {
+
+                return BadRequest(codErro);
+            }
+            
         }
     }
 }

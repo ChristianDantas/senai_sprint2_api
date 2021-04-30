@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>hroads_tarde_webApi</name>
+    </assembly>
+    <members>
+        <member name="M:hroads_tarde_webApi.Controllers.ClasseController.Get">
+            <summary>
+            O usuário poderá ver todas as classes presentes até o momento, qualquer um pode realizar essa ação.
+            </summary>
+            <returns>Lista de classes</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.ClasseController.GetById(System.Int32)">
+            <summary>
+            O usuário poderá procurar uma classe de acordo com o ID dela, qualquer um pode realizar essa ação.
+            </summary>
+            <param name="id">id do objeto Classe que será retornado</param>
+            <returns>Um objeto classe</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.ClasseController.Post(hroads_tarde_webApi.Domains.Classe)">
+            <summary>
+            Requisição para cadastrar uma nova classe, apenas administradores poderão realizar essa ação.
+            </summary>
+            <param name="novaClasse">Informação da nova classe que será cadastrada</param>
+            <returns>StatusCode 201 (Created)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.ClasseController.Put(System.Int32,hroads_tarde_webApi.Domains.Classe)">
+            <summary>
+            Requisição para atualizar uma classe existente, apenas administradores poderão realizar essa ação.
+            </summary>
+            <param name="id">id da classe que será atualizada</param>
+            <param name="classeAtt">informações da classe atualizada</param>
+            <returns>Status Code 204 (No Content) informando que a classe foi atualizada.</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.ClasseController.Delete(System.Int32)">
+            <summary>
+            Requisição para excluir uma classe existente, apenas administradores poderão realizar essa ação.
+            </summary>
+            <param name="id">id do objeto classe que será deletado</param>
+            <returns>Status Code 204 (No Content) Informando que a classe foi deletada</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.ClasseController.GetChar">
+            <summary>
+            Requisição para listar as classes com seus respectivos personagens, qualquer um pode realizar essa ação.
+            </summary>
+            <returns>Uma lista de classes com personagens</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.HabilidadeController.ListarTodos">
+            <summary>
+            O usuário poderá ver todas as habilidades presentes até o momento, qualquer um pode realizar essa ação.
+            </summary>
+            <returns>Uma lista com as habilidades</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.HabilidadeController.ListarComHabilidade">
+            <summary>
+            Requisição para listar as habilidades com seus respectivos tipos, qualquer um pode realizar essa ação.
+            </summary>
+            <returns>Uma lista com habilidades e seus tipos</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.HabilidadeController.Deletar(System.Int32)">
+            <summary>
+            Requisição para excluir uma habilidade existente, apenas administradores poderão realizar essa ação.
+            </summary>
+            <param name="id">id do objeto que será deletado</param>
+            <returns>Um Status Code 204 (No Content) informando que foi deletado</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.HabilidadeController.ListarPorId(System.Int32)">
+            <summary>
+            O usuário poderá procurar uma habilidade de acordo com o ID dela, qualquer um pode realizar essa ação.
+            </summary>
+            <param name="id">id da habilidade que será buscada</param>
+            <returns>a habilidade buscada</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.HabilidadeController.Register(hroads_tarde_webApi.Domains.Habilidade)">
+            <summary>
+            Requisição para cadastrar uma nova habilidade, apenas administradores poderão realizar essa ação.
+            </summary>
+            <param name="novaHabilidade">informação da nova habilidade que será cadastrada</param>
+            <returns>Um Status Code 201 (Created) informando que foi criado</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.HabilidadeController.Update(System.Int32,hroads_tarde_webApi.Domains.Habilidade)">
+            <summary>
+            Requisição para atualizar uma habilidade existente, apenas administradores poderão realizar essa ação.
+            </summary>
+            <param name="id">id da habilidade que será atualizada</param>
+            <param name="habilidadeAtt">novas informações da habilidade para atualizar</param>
+            <returns>Um status code 204</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.LoginController.Login(hroads_tarde_webApi.Domains.Usuario)">
+            <summary>
+            Requisição necessária para encontrar um usuário e assim dar suas devidas permissões.
+            </summary>
+            <param name="login">email e senha do usuário cadastrado</param>
+            <returns>Caso o email e senha informado estejam errados, é retornado uma mensagem de erro, caso contrário, é dado ao usuário um token de validação</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.PersonagemController.Listar">
+            <summary>
+            O usuário poderá ver todos os personagens presentes até o momento, qualquer um pode realizar essa ação.
+            </summary>
+            <returns>Uma lista de personagens</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.PersonagemController.ListarId(System.Int32)">
+            <summary>
+            Requisição para ver um personagem de acordo com o id, qualquer um pode realizar essa ação.
+            </summary>
+            <param name="id">id do personagem que será buscado</param>
+            <returns>O personagem buscado</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.PersonagemController.Cadastrar(hroads_tarde_webApi.Domains.Personagem)">
+            <summary>
+            Requisição para cadastrar um novo personagem, apenas Jogadores podem realizar essa ação.
+            </summary>
+            <param name="novoPersonagem">informações do novo personagem que será criado</param>
+            <returns>Um status code 201 (Created)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.PersonagemController.Atualizar(System.Int32,hroads_tarde_webApi.Domains.Personagem)">
+            <summary>
+            Requisição para atualizar um personagem existente, apenas jogadores podem fazer essa ação.
+            </summary>
+            <param name="id">id do personagem que será atualizado</param>
+            <param name="persoAtt">informações para o personagem ser atualizado</param>
+            <returns>Um status code 204 (No Content)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.PersonagemController.Deletar(System.Int32)">
+            <summary>
+            Requisição para excluir um personagem existente, apenas jogadores podem fazer essa ação.
+            </summary>
+            <param name="id">id do personagem que será deletado</param>
+            <returns>Um status code 204 (No Content)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoHabilidadeController.Listar">
+            <summary>
+            Requisição para ver todos os tipos de habilidade presentes até o momento, qualquer um pode realizar essa função.
+            </summary>
+            <returns>Uma lista dos tipos de habilidade</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoHabilidadeController.ListarHabilidade">
+            <summary>
+            Requisição para ver os tipos de habilidade com suas respectivas habilidades, qualquer um pode realizar essa função.
+            </summary>
+            <returns>Uma lista dos tipos de habilidade e habilidades</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoHabilidadeController.ListarPorId(System.Int32)">
+            <summary>
+            Requisição para buscar um tipo de habilidade pelo seu id, qualquer um pode realizar essa função.
+            </summary>
+            <param name="id">id do tipo de habilidade que será buscado</param>
+            <returns>um tipo de habilidade correspondente ao seu id</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoHabilidadeController.Cadastrar(hroads_tarde_webApi.Domains.TipoHabilidade)">
+            <summary>
+            Requisição para registrar um novo tipo de habilidade, apenas administradores podem realizar essa ação.
+            </summary>
+            <param name="novoTipo">informações do novo tipo de habilidade</param>
+            <returns>Um status code 201 (Created)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoHabilidadeController.Atualizar(System.Int32,hroads_tarde_webApi.Domains.TipoHabilidade)">
+            <summary>
+            Requisição para atualizar um tipo de habilidade existente, apenas administradores podem realizar essa ação.
+            </summary>
+            <param name="id">id do tipo de habilidade que será atualizado</param>
+            <param name="tipoAtt">informações para atualizar</param>
+            <returns>Um status code 204 (No Content)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoHabilidadeController.Deletar(System.Int32)">
+            <summary>
+            Requisição para excluir um tipo de habilidade, apenas administradores podem realizar essa ação. 
+            </summary>
+            <param name="id">id do tipo que será deletado</param>
+            <returns>Um status code 204 (No Content)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoUsuarioController.ListarTodos">
+            <summary>
+            Requisição para listar todos os tipos de usuários, qualquer um pode realizar essa ação.
+            </summary>
+            <returns>Uma lista com os tipos de usuários</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoUsuarioController.ListarTodosUsuarios">
+            <summary>
+            Requisição para listar os tipos de usuários juntamente de seus usuários, qualquer um pode realizar essa ação.
+            </summary>
+            <returns>Uma lista com tipo de usuário e seus usuários</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoUsuarioController.ListarPorId(System.Int32)">
+            <summary>
+            Requisição para buscar um tipo de usuário pelo seu id, qualquer um pode realizar essa ação.
+            </summary>
+            <param name="id">id do tipo de usuario que será buscado</param>
+            <returns>um tipo de usuário</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoUsuarioController.Cadastrar(hroads_tarde_webApi.Domains.TipoUsuario)">
+            <summary>
+            Requisição para cadastrar um novo tipo de usuário, apenas administradores podem realizar essa ação.
+            </summary>
+            <param name="novoTipo">Informações do novo tipo de usuário</param>
+            <returns>Um status code 201 (created)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoUsuarioController.Atualizar(System.Int32,hroads_tarde_webApi.Domains.TipoUsuario)">
+            <summary>
+            Requisição para atualizar um tipo de usuário, apenas administradores podem fazer isso.
+            </summary>
+            <param name="id">id do tipo que será atualizado</param>
+            <param name="tipoAtt">novas informações do tipo de usuário</param>
+            <returns>um status code 204 (No Content)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.TipoUsuarioController.Deletar(System.Int32)">
+            <summary>
+            Requisição para deletar um tipo de usuário, apenas administradores podem realizar essa função.
+            </summary>
+            <param name="id">id do tipo de usuario que será deletado</param>
+            <returns>Um statud code 204 (No Content)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.UsuarioController.ListarTodos">
+            <summary>
+            Requisição para listar todos os usuários, apenas o administrador pode realizar essa ação 
+            </summary>
+            <returns>uma lista com os usuários</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.UsuarioController.ListarPorId(System.Int32)">
+            <summary>
+            Requisição para buscar um usuário de acordo com seu id, apenas o administrador pode realizar essa ação.
+            </summary>
+            <param name="id">id do usuário que será buscado</param>
+            <returns>O usuário buscado</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.UsuarioController.ListarComTipo">
+            <summary>
+            Requisição para listar todos os usuários com os seus tipos, apenas o administrador pode realizar essa ação.
+            </summary>
+            <returns>uma lista com usuários e seus tipos de usuário</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.UsuarioController.Cadastrar(hroads_tarde_webApi.Domains.Usuario)">
+            <summary>
+            Requisição para cadastrar um usuário novo, qualquer um pode realizar essa ação.
+            </summary>
+            <param name="novoUsuario">informações do novo usuário</param>
+            <returns>Um status code 201 (Created)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.UsuarioController.Atualizar(System.Int32,hroads_tarde_webApi.Domains.Usuario)">
+            <summary>
+            Requisição para atualizar um usuário existente, apenas o administrador pode fazer isso.
+            </summary>
+            <param name="id">id do usuário que será atualizado</param>
+            <param name="usuarioAtt">novas informações do usuário.</param>
+            <returns>Um status code 204 (no Content)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Controllers.UsuarioController.Deletar(System.Int32)">
+            <summary>
+            Requisição para deletar uma conta existente, apenas um administrador pode fazer isso.
+            </summary>
+            <param name="id">id da conta que será deletada</param>
+            <returns>Um status code 204 (No Content)</returns>
+        </member>
+        <member name="M:hroads_tarde_webApi.Repositories.ClasseRepository.Atualizar(System.Int32,hroads_tarde_webApi.Domains.Classe)">
+            <summary>
+            teste
+            </summary>
+            <param name="id"></param>
+            <param name="classeAtt"></param>
+        </member>
+    </members>
+</doc>

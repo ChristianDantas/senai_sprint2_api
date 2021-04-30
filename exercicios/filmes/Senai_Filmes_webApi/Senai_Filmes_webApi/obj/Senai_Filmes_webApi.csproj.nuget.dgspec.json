@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\288\\source\\repos\\Senai_Filmes_webApi\\Senai_Filmes_webApi\\Senai_Filmes_webApi.csproj": {}
+    "C:\\Users\\54690823855\\Desktop\\senai_sprint2_api\\exercicios\\filmes\\Senai_Filmes_webApi\\Senai_Filmes_webApi\\Senai_Filmes_webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\288\\source\\repos\\Senai_Filmes_webApi\\Senai_Filmes_webApi\\Senai_Filmes_webApi.csproj": {
+    "C:\\Users\\54690823855\\Desktop\\senai_sprint2_api\\exercicios\\filmes\\Senai_Filmes_webApi\\Senai_Filmes_webApi\\Senai_Filmes_webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\288\\source\\repos\\Senai_Filmes_webApi\\Senai_Filmes_webApi\\Senai_Filmes_webApi.csproj",
+        "projectUniqueName": "C:\\Users\\54690823855\\Desktop\\senai_sprint2_api\\exercicios\\filmes\\Senai_Filmes_webApi\\Senai_Filmes_webApi\\Senai_Filmes_webApi.csproj",
         "projectName": "Senai_Filmes_webApi",
-        "projectPath": "C:\\Users\\288\\source\\repos\\Senai_Filmes_webApi\\Senai_Filmes_webApi\\Senai_Filmes_webApi.csproj",
-        "packagesPath": "C:\\Users\\288\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\288\\source\\repos\\Senai_Filmes_webApi\\Senai_Filmes_webApi\\obj\\",
+        "projectPath": "C:\\Users\\54690823855\\Desktop\\senai_sprint2_api\\exercicios\\filmes\\Senai_Filmes_webApi\\Senai_Filmes_webApi\\Senai_Filmes_webApi.csproj",
+        "packagesPath": "C:\\Users\\54690823855\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\54690823855\\Desktop\\senai_sprint2_api\\exercicios\\filmes\\Senai_Filmes_webApi\\Senai_Filmes_webApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\288\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\54690823855\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
