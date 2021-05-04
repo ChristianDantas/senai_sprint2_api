@@ -7964,11 +7964,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\54690823855\\Desktop\\senai-sprint-2-back-end\\API\\senai_hroads_tarde\\hroads_tarde_webApi\\hroads_tarde_webApi.csproj",
+      "projectUniqueName": "C:\\Users\\54690823855\\Desktop\\senai_sprint2_api\\SENAI_HROADS_TARDE_Chris&Bruno\\senai_hroads_tarde\\hroads_tarde_webApi\\hroads_tarde_webApi.csproj",
       "projectName": "hroads_tarde_webApi",
-      "projectPath": "C:\\Users\\54690823855\\Desktop\\senai-sprint-2-back-end\\API\\senai_hroads_tarde\\hroads_tarde_webApi\\hroads_tarde_webApi.csproj",
+      "projectPath": "C:\\Users\\54690823855\\Desktop\\senai_sprint2_api\\SENAI_HROADS_TARDE_Chris&Bruno\\senai_hroads_tarde\\hroads_tarde_webApi\\hroads_tarde_webApi.csproj",
       "packagesPath": "C:\\Users\\54690823855\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\54690823855\\Desktop\\senai-sprint-2-back-end\\API\\senai_hroads_tarde\\hroads_tarde_webApi\\obj\\",
+      "outputPath": "C:\\Users\\54690823855\\Desktop\\senai_sprint2_api\\SENAI_HROADS_TARDE_Chris&Bruno\\senai_hroads_tarde\\hroads_tarde_webApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
