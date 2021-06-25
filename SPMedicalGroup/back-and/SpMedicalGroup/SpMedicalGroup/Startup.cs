@@ -18,17 +18,17 @@ namespace SpMedicalGroup
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
-        {
+       {
             services.AddControllers()
                .AddNewtonsoftJson(options =>
-               {
+              {
                    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                    options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
                });
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Inlock.webApi", Version = "v1" });
 
-                // Set the comments path for the Swagger JSON and UI.
+              //   Set the comments path for the Swagger JSON and UI.
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
@@ -51,7 +51,7 @@ namespace SpMedicalGroup
 
                         // define que o audience será validado
                         ValidateAudience = true,
-
+            
                         // define que o tempo de vida será validado
                         ValidateLifetime = true,
 
@@ -63,7 +63,7 @@ namespace SpMedicalGroup
 
                         // define o nome da issuer, de onde está vindo
                         ValidIssuer = "SpMedicalGroup",
-
+            
                         // define o nome da audience, para onde está indo
                         ValidAudience = "SpMedicalGroup"
                     };
@@ -82,7 +82,7 @@ namespace SpMedicalGroup
             app.UseSwagger();
 
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-            // specifying the Swagger JSON endpoint.
+             //specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "SpMedicalGroup");
@@ -92,7 +92,7 @@ namespace SpMedicalGroup
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
+        
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

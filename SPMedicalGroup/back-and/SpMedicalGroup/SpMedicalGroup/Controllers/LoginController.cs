@@ -23,11 +23,11 @@ namespace SpMedicalGroup.Controllers
         {
             _UsuarioRepository = new UsuarioRepository();
         }
-        [HttpPost]
+       [HttpPost]
         public IActionResult GetEmailAndPassword(Usuario UsuarioProcurado)
         {
             try
-            {
+           {
                 // Busca o usuário pelo e-mail e senha
                 Usuario usuarioBuscado = _UsuarioRepository.Login(UsuarioProcurado.Email, UsuarioProcurado.Senha);
 
@@ -36,7 +36,7 @@ namespace SpMedicalGroup.Controllers
                 {
                     // Retorna NotFound com uma mensagem de erro
                     return NotFound("E-mail ou senha inválidos!");
-                }
+               }
 
                 // Caso o usuário seja encontrado, prossegue para a criação do token
 
@@ -49,7 +49,7 @@ namespace SpMedicalGroup.Controllers
                 // Define os dados que serão fornecidos no token - Payload
                 var claims = new[]
                 {
-                    // Armazena na Claim o e-mail do usuário autenticado
+                     //Armazena na Claim o e-mail do usuário autenticado
                     new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
 
                     // Armazena na Claim o ID do usuário autenticado
@@ -66,7 +66,7 @@ namespace SpMedicalGroup.Controllers
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                 // Gera o token
-                var token = new JwtSecurityToken(
+               var token = new JwtSecurityToken(
                     issuer: "SpMedicalGroup",                 // emissor do token
                     audience: "SpMedicalGroup",               // destinatário do token
                     claims: claims,                        // dados definidos acima
