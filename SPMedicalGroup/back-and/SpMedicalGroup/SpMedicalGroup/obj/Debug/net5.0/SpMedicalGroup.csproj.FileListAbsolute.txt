@@ -72,3 +72,5 @@ C:\Users\54690823855\Desktop\senai_sprint2_api\SPMedicalGroup\Codigo\SpMedicalGr
 C:\Users\54690823855\Desktop\senai_sprint2_api\SPMedicalGroup\Codigo\SpMedicalGroup\SpMedicalGroup\obj\Debug\net5.0\SpMedicalGroup.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\54690823855\Desktop\senai_sprint2_api\SPMedicalGroup\Codigo\SpMedicalGroup\SpMedicalGroup\bin\Debug\net5.0\SpMedicalGroup.xml
 C:\Users\54690823855\Desktop\senai_sprint2_api\SPMedicalGroup\Codigo\SpMedicalGroup\SpMedicalGroup\obj\Debug\net5.0\SpMedicalGroup.xml
+C:\Users\fic\Desktop\senai_sprint2_api\SPMedicalGroup\back-and\SpMedicalGroup\SpMedicalGroup\obj\Debug\net5.0\SpMedicalGroup.xml
+C:\Users\fic\Desktop\senai_sprint2_api\SPMedicalGroup\back-and\SpMedicalGroup\SpMedicalGroup\obj\Debug\net5.0\SpMedicalGroup.pdb

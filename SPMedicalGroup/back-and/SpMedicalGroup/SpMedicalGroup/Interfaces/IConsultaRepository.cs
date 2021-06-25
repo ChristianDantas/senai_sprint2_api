@@ -18,6 +18,7 @@ namespace SpMedicalGroup.Interfaces
 
         void Deletar(int id);
 
+        public void AtualizarDes(int id, Consulta novoDescrição);
        public List<Consulta> Minhas(int idUsuario, int role);
 
         void AlterStatus(int id, string Status);

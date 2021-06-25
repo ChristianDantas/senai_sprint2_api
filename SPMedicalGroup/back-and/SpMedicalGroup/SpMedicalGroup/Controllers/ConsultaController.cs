@@ -98,5 +98,27 @@ namespace SpMedicalGroup.Controllers
             _ConsultaRepository.Atualizar(id, ConsultaAtualizada);
             return StatusCode(204);
         }
+        [Authorize(Roles = "2")]
+        [HttpPatch("descricao/{id}")]
+        public IActionResult AtualizarDescriçao(int id, Consulta Descricao)
+        {
+            try
+            {
+                // Faz a chamada para o método  
+                _ConsultaRepository.AtualizarDes(id, Descricao);
+
+                // Retora a resposta da requisição 204 - No Content
+                return StatusCode(204);
+            }
+            catch (Exception error)
+            {
+                // Retorna a resposta da requisição 400 - Bad Request e o erro ocorrido
+                return BadRequest(new
+                {
+                    mensagem = "Somente o médico pode alterar a Descrição!",
+                    error
+                });
+            }
+        }
     }
 }

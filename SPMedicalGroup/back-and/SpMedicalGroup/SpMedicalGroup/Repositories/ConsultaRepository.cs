@@ -96,8 +96,21 @@ namespace SpMedicalGroup.Repositories
             return ctx.Consultas.ToList();
         }
 
+        public void AtualizarDes(int id, Consulta novoDescrição)
+        {
+            Consulta ConsultaBuscado = ctx.Consulta.Find(id);
 
-        
+            if (novaDescrição.Descricao != null)
+            {
+                ConsultaBuscado.Descricao = novaDescrição.Descricao;
+            }
+
+            ctx.Consulta.Update(ConsultaBuscado);
+
+            ctx.SaveChanges();
+        }
+
+
         public List<Consulta> Minhas(int idUsuario, int role)
         {       
 
