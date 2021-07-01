@@ -1,5 +1,7 @@
 USE MedGroup;
 
+SELECT * FROM Usuarios
+
 INSERT INTO Clinicas(RazaoSocial,Endereco, CNPJ, NomeFantasia, HorarioFuncionamento )
 values               ('SP Medical Group','AV. Barão Limeira,532','86.400.902/0001-30','Clinica Porssale', '6:00-23:00');
 GO
