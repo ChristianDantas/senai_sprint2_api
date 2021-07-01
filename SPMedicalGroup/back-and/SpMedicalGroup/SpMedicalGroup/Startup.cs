@@ -26,12 +26,21 @@ namespace SpMedicalGroup
                    options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
                });
             services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Inlock.webApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "spmedicalgroup.webApi", Version = "v1" });
 
               //   Set the comments path for the Swagger JSON and UI.
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
+            });
+            services.AddCors(options => {
+                options.AddPolicy("Corsario",
+                    builder => {
+                        builder.WithOrigins("http://localhost:3000", "http://localhost:19006")
+                                                                    .AllowAnyHeader()
+                                                                    .AllowAnyMethod();
+                    }
+                );
             });
 
             services
@@ -67,8 +76,10 @@ namespace SpMedicalGroup
                         // define o nome da audience, para onde está indo
                         ValidAudience = "SpMedicalGroup"
                     };
+
                 });
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -92,7 +103,9 @@ namespace SpMedicalGroup
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-        
+            app.UseCors("Corsario");
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

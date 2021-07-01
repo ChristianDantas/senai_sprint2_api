@@ -32,7 +32,7 @@ namespace SpMedicalGroup.Contexts
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=LAB08DESK115869\\SQLEXPRESS2019;Initial Catalog=MedGroup;user id=sa;pwd=sa@132");
+                optionsBuilder.UseSqlServer("Data Source=LAB08DESK2301\\SQLEXPRESS;Initial Catalog=MedGroup;user id=sa;pwd=sa@132");
             }
         }
 
@@ -82,6 +82,13 @@ namespace SpMedicalGroup.Contexts
                 entity.Property(e => e.DescricaoConsulta)
                     .HasMaxLength(200)
                     .IsUnicode(false);
+
+                entity.Property(e => e.IdMedico).HasColumnName("idMedico");
+
+                entity.Property(e => e.IdPaciente).HasColumnName("idPaciente");
+
+                entity.Property(e => e.IdSituacao).HasColumnName("idSituacao");
+
 
                 entity.HasOne(d => d.IdMedicoNavigation)
                     .WithMany(p => p.Consulta)

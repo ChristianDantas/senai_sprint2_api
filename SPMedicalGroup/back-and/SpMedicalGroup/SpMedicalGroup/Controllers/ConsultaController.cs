@@ -45,7 +45,7 @@ namespace SpMedicalGroup.Controllers
             }
 
         }
-        [Authorize(Roles = "1")]
+       // [Authorize(Roles = "1")]
         [HttpPatch("{id}")]
         public IActionResult Patch(int id, Situacao ConsultaPermissao)
         {
@@ -72,14 +72,14 @@ namespace SpMedicalGroup.Controllers
         {
             return Ok(_ConsultaRepository.Listar());
         }
-        [Authorize(Roles = "1")]
+        //[Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(Consulta NovaConsulta)
         {
             _ConsultaRepository.Cadastrar(NovaConsulta);
             return StatusCode(201);
         }
-        [Authorize(Roles = "1")]
+        //[Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -98,7 +98,7 @@ namespace SpMedicalGroup.Controllers
             _ConsultaRepository.Atualizar(id, ConsultaAtualizada);
             return StatusCode(204);
         }
-        [Authorize(Roles = "2")]
+        //[Authorize(Roles = "3")]
         [HttpPatch("descricao/{id}")]
         public IActionResult AtualizarDescriçao(int id, Consulta Descricao)
         {

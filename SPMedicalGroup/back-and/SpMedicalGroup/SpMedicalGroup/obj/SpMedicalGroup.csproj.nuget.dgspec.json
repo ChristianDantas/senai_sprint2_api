@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fic\\Desktop\\senai_sprint2_api\\SPMedicalGroup\\back-and\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj": {}
+    "C:\\Users\\Fic\\Desktop\\senai_sprint2_api\\SPMedicalGroup\\back-and\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fic\\Desktop\\senai_sprint2_api\\SPMedicalGroup\\back-and\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj": {
+    "C:\\Users\\Fic\\Desktop\\senai_sprint2_api\\SPMedicalGroup\\back-and\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fic\\Desktop\\senai_sprint2_api\\SPMedicalGroup\\back-and\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj",
+        "projectUniqueName": "C:\\Users\\Fic\\Desktop\\senai_sprint2_api\\SPMedicalGroup\\back-and\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj",
         "projectName": "SpMedicalGroup",
-        "projectPath": "C:\\Users\\fic\\Desktop\\senai_sprint2_api\\SPMedicalGroup\\back-and\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj",
-        "packagesPath": "C:\\Users\\fic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fic\\Desktop\\senai_sprint2_api\\SPMedicalGroup\\back-and\\SpMedicalGroup\\SpMedicalGroup\\obj\\",
+        "projectPath": "C:\\Users\\Fic\\Desktop\\senai_sprint2_api\\SPMedicalGroup\\back-and\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj",
+        "packagesPath": "C:\\Users\\Fic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fic\\Desktop\\senai_sprint2_api\\SPMedicalGroup\\back-and\\SpMedicalGroup\\SpMedicalGroup\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\fic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Fic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

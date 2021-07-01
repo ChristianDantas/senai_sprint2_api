@@ -93,7 +93,15 @@ namespace SpMedicalGroup.Repositories
 
         public List<Consulta> Listar()
         {
-            return ctx.Consultas.ToList();
+            return ctx.Consultas
+
+            .Include(p => p.IdMedicoNavigation)
+
+            .Include(p => p.IdPacienteNavigation)
+
+            .Include(p => p.IdSituacaoNavigation)
+
+            .ToList();
         }
 
         public void AtualizarDes(int id, Consulta novaDescrição)
