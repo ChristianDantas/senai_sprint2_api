@@ -57,7 +57,7 @@ namespace SpMedicalGroup.Controllers
 
                     // Armazena na Claim o tipo de usuário que foi autenticado (Administrador ou Comum)
                     new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoU.ToString()),
-                    new Claim("Role", usuarioBuscado.IdTipoU.ToString())
+                    new Claim("role", usuarioBuscado.IdTipoU.ToString())
                 };
 
                 // Define a chave de acesso ao token
